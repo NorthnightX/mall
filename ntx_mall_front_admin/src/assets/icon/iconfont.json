@@ -1,0 +1,79 @@
+{
+  "id": "4227151",
+  "name": "mall",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1155",
+      "name": "广告位",
+      "font_class": "guanggaowei",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "201644",
+      "name": "3.1 全部商品",
+      "font_class": "31quanbushangpin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "2892820",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "8094198",
+      "name": "类别",
+      "font_class": "leibie",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "8455509",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "11372658",
+      "name": "订单",
+      "font_class": "dingdan1",
+      "unicode": "e8ae",
+      "unicode_decimal": 59566
+    },
+    {
+      "icon_id": "12184868",
+      "name": "商品",
+      "font_class": "shangpin",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "12889878",
+      "name": "统计分析-常规统计",
+      "font_class": "tongjifenxi-changguitongji",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "15053968",
+      "name": "人员",
+      "font_class": "ic_person_card24px",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "34180882",
+      "name": "人员",
+      "font_class": "renyuan",
+      "unicode": "e6d2",
+      "unicode_decimal": 59090
+    }
+  ]
+}

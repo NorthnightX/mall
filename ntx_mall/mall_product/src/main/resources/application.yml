@@ -1,0 +1,98 @@
+server:
+  port: 8093
+spring:
+  rabbitmq:
+    host: localhost
+    virtual-host: /ntx
+    port: 5672
+    username: root
+    password: 123456
+    listener:
+      simple:
+        prefetch: 1 #消息预取，处理完才能获取下一个消息
+  cloud:
+    nacos:
+      discovery:
+#        secret-key: VGhpc0lzTXlDdXN0b21TZWNyZXRLZXkwMTIzNDU2Nzg=
+#        username: nacos
+#        password: nacos
+        cluster-name: SH
+        server-addr: localhost:8848
+
+  #        server-addr: 8.140.17.235:8848
+  # 标记应用名称,用于注册中心注册
+  application:
+    name: mallProductService
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/n_mall_product?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+  redis:
+    port: 6379
+    password: 155365
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+    host: 192.168.203.131
+
+  jackson:
+    default-property-inclusion: non_null
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 350MB
+  kafka:
+    bootstrap-servers: 192.168.203.131:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: userBehavior
+      enable-auto-commit: true
+      auto-commit-interval: 1000ms
+
+  data:
+    mongodb:
+      uri: mongodb://192.168.203.131:27017/malldb?connectTimeoutMS=60000&maxIdleTimeMS=60000
+mybatis-plus:
+  type-aliases-package: com.ntx.mallcommon.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.ntx: debug
+
+# feign调用超时时间配置
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 600000
+        readTimeout: 600000
+  hystrix:
+    enabled: false    # 不要开启hystrix，会导致超时配置不生效
+
+#seata:
+#  registry:
+#    type: nacos
+#    nacos:
+#      server-addr: localhost:8848
+#      username: nacos
+#      password: nacos
+#      namespace: ""
+#      group: DEFAULT_GROUP
+#      application: seata-tc-server
+#  tx-service-group: seata-mall
+#  service:
+#    vgroup-mapping:
+#      seata-mall: SH
+
